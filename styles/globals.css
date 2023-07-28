@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* body {
+    background-color:hsla(288,100%,50%,1);
+    background-image:
+    radial-gradient(at 1% 35%, hsla(172,100%,49%,1) 0px, transparent 50%),
+    radial-gradient(at 89% 59%, hsla(205,100%,50%,1) 0px, transparent 50%),
+    radial-gradient(at 32% 98%, hsla(170,100%,50%,1) 0px, transparent 50%),
+    radial-gradient(at 67% 18%, hsla(201,100%,50%,1) 0px, transparent 50%),
+    radial-gradient(at 3% 23%, hsla(193,99%,74%,1) 0px, transparent 50%),
+    radial-gradient(at 74% 94%, hsla(172,100%,50%,1) 0px, transparent 50%),
+    radial-gradient(at 81% 90%, hsla(189,100%,50%,1) 0px, transparent 50%);
+} */
+html {
+    
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.prof-image {
+    filter: drop-shadow(0px 0px 20px #000000);
+}
+
+body {
+    background-color: rgb(24 24 27);
+
+}
