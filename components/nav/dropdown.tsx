@@ -26,12 +26,12 @@ export const DropDown = (props: DropDownProps) => {
                     <img src="/menu.svg" width={30}></img>
                 </button>
                 { isOpen ? (
-                    <div className={"origin-top-right absolute right-0 mt-2 w-24 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 " + color}>
-                        <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                            <NavButton text={"About"} active={false} activeColor={color} textColor={color} associatedRef={aboutRef} />
-                            <NavButton text={"Projects"} active={false} activeColor={color} textColor={color} associatedRef={projectRef} />
-                            <NavButton text={"Resume"} active={false} activeColor={color} textColor={color} associatedRef={resumeRef} />
-                            <NavButton text={"Contact"} active={false} activeColor={color} textColor={color} associatedRef={contactRef} />
+                    <div className={"origin-top-right absolute right-[-8vw] mt-2 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 " + color}>
+                        <div className="py-1 flex flex-col px-6 gap-2" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                            <NavButton text={"About"} active={false} activeColor={"text-cyan-500"} textColor={"text-white"} associatedRef={aboutRef} text_size="text-3xl" />
+                            <NavButton text={"Projects"} active={false} activeColor={"text-cyan-500"} textColor={"text-white"} associatedRef={projectRef} text_size="text-3xl" />
+                            <NavButton text={"Resume"} active={false} activeColor={"text-cyan-500"} textColor={"text-white"} associatedRef={resumeRef} text_size="text-3xl" />
+                            <NavButton text={"Contact"} active={false} activeColor={"text-cyan-500"} textColor={"text-white"} associatedRef={contactRef} text_size="text-3xl" />
                         </div>
                     </div>
                 ) : null }

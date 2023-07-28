@@ -6,10 +6,11 @@ type NavButtonProps = {
     activeColor: string;
     textColor: string;
     associatedRef: MutableRefObject<HTMLDivElement | null>
+    text_size?: string;
 }
 
 const NavButton = (props: NavButtonProps) => {
-    var { text, active, activeColor, textColor, associatedRef } = props;
+    var { text, active, activeColor, textColor, associatedRef, text_size } = props;
 
     var toAdd = "";
 
@@ -19,13 +20,19 @@ const NavButton = (props: NavButtonProps) => {
         toAdd = textColor;
     }
 
+    if (text_size) {
+        toAdd += " " + text_size;
+    } else {
+        toAdd += " text-[2vw]";
+    }
+
     const handleClick = () => {
         associatedRef.current!.scrollIntoView({ behavior: 'smooth' });
     }
 
     return (
         <button onClick={handleClick}> 
-            <h1 className={"font-serif text-[2vw] " + toAdd }>{text}</h1>
+            <h1 className={"font-serif " + toAdd }>{text}</h1>
         </button>
     )
 }
