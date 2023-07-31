@@ -12,7 +12,7 @@ const ProjectItem = (props: ProjectItemProps) => {
     const { title, description, link, image, langs } = props;
 
     return (
-        <div className="w-80 bg-stone-800 rounded-md shrink-0 snap-center p-3">
+        <div className="w-80 bg-stone-800 rounded-md shrink-0 snap-center p-3 max-h-[512px]">
             <Link href={link} target="_blank" rel="noopener noreferrer" className="flex flex-col h-full">
                 {/* image */}
                 <img src={image} alt={title} className="w-full aspect-square bg-stone-700 rounded-md" />
