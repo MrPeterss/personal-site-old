@@ -60,7 +60,15 @@ const Home: NextPage = () => {
     }
 
     // if the initial render is not complete, don't render anything
-    if (!initialRenderComplete) return (<div className="min-h-screen w-full items-center justify-center bg-stone-900"/>);
+    if (!initialRenderComplete) return (
+        <div className="min-h-screen w-full items-center justify-center bg-stone-900">
+            <Head>
+                <title>Peter Bidoshi</title>
+                <meta name='description' content='The personal website of student Peter Bidoshi'/>
+                <link rel="icon" href="/bidoshi.com-ico.png" />
+            </Head>
+        </div>
+    );
 
     if (isUpright) {
         return (
