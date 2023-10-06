@@ -10,7 +10,7 @@ type NavButtonProps = {
 }
 
 const NavButton = (props: NavButtonProps) => {
-    var { text, active, activeColor, textColor, associatedRef, text_size } = props;
+    var { text, active, activeColor, textColor, associatedRef } = props;
 
     var toAdd = "";
 
@@ -20,19 +20,13 @@ const NavButton = (props: NavButtonProps) => {
         toAdd = textColor;
     }
 
-    if (text_size) {
-        toAdd += " " + text_size;
-    } else {
-        toAdd += " text-[2vw]";
-    }
-
     const handleClick = () => {
         associatedRef.current!.scrollIntoView({ behavior: 'smooth' });
     }
 
     return (
         <button onClick={handleClick}> 
-            <h1 className={"font-serif " + toAdd }>{text}</h1>
+            <h1 className={"font-serif text-3xl " + toAdd }>{text}</h1>
         </button>
     )
 }
