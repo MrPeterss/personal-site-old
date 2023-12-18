@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion, useScroll } from "framer-motion"
 import { MutableRefObject, useEffect, useRef, useState } from "react";
 import Button from "../components/button";
-import NavBar from "../components/nav/navbar";
+import NavBar, { Pages } from "../components/nav/navbar";
 import useWindowDimensions from "../@hooks/useWindowDimension";
 import ProjectItem from "../components/projectItem";
 
@@ -49,7 +49,7 @@ const Home: NextPage = () => {
             
             <main>
                 {/* navbar */}
-                <NavBar navColor={navColor} activeColor={activeColor} textColor={textColor} aboutRef={aboutRef} projectRef={projectRef} resumeRef={resumeRef} contactRef={contactRef} active={active} isMobile={false} />
+                <NavBar active={Pages.ABOUT} />
                 {/* content */}
                 {/* about */}
                 <div className="flex w-full gap-6 px-10 py-16 min-h-screen flex-col sm:flex-row" ref={aboutRef}>
